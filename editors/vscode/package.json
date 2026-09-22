@@ -1,0 +1,27 @@
+{
+  "name": "qifflt-syntax",
+  "displayName": "Qifflt Syntax Highlighting",
+  "description": "Syntax highlighting for Qifflt (.qft), Qifflt Markup (.qfx), and Qifflt Audio (.qfa).",
+  "version": "0.1.0",
+  "publisher": "teamcode",
+  "license": "MIT",
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "qifflt",
+        "aliases": ["Qifflt", "qifflt"],
+        "extensions": [".qft", ".qfx", ".qfa"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "qifflt",
+        "scopeName": "source.qifflt",
+        "path": "./syntaxes/qifflt.tmLanguage.json"
+      }
+    ]
+  }
+}

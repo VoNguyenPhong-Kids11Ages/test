@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Qifflt",
+  "scopeName": "source.qifflt",
+  "fileTypes": [
+    "qft",
+    "qfx",
+    "qfa"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#markup-tags"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#glyph-strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#builtins"
+    },
+    {
+      "include": "#literals"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#punctuation"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.qifflt",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.qifflt",
+          "begin": "《!--",
+          "end": "--》"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.qifflt",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.qifflt",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "glyph-strings": {
+      "name": "string.other.glyph.qifflt",
+      "begin": "「",
+      "end": "」",
+      "comment": "Text spelled in the Qifflt alphabet; decodes to plain text at parse time."
+    },
+    "numbers": {
+      "name": "constant.numeric.qifflt",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "keywords": {
+      "name": "keyword.control.qifflt",
+      "match": "(₫\\+€×■@|1†Φ2|1₽53|Ω¥0¢|±•₹£|•₽÷•|5√£Ω|€97¥|±†√Φ|8Ψ£¥|30√Ω|\\b(vhqzomntyk|uzljmwgyv|cqwvlmmzx|ohfzkvwto|cnutbvaug|oxzskaztk|gtfqqqfyv|zqpryuxlx|mtgzytnfw|rtgunjyrk|osmumetiy)\\b)"
+    },
+    "builtins": {
+      "name": "support.function.builtin.qifflt",
+      "match": "(₫1¥£!|∞2₩7|\\b(fpjrsidnvt|wakcipqtm)\\b)"
+    },
+    "literals": {
+      "name": "constant.language.qifflt",
+      "match": "(±±₹§|¶50£|₹∆0±|\\b(bfkcgorib|njxebuolm|wggepmtnr)\\b)"
+    },
+    "operators": {
+      "name": "keyword.operator.qifflt",
+      "match": "==|!=|<=|>=|[+\\-*/%=<>]"
+    },
+    "punctuation": {
+      "name": "punctuation.qifflt",
+      "match": "[()\\[\\],]"
+    },
+    "markup-tags": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.qifflt",
+          "match": "《⁄?"
+        },
+        {
+          "name": "entity.name.tag.qifflt",
+          "match": "⁄?》"
+        }
+      ]
+    }
+  }
+}

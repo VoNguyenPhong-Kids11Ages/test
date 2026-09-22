@@ -1,0 +1,9 @@
+# import via the symbol alias
+₫+€×■@ "mathlib.qft"
+
+₫1¥£!(square(6))
+₫1¥£!(cube(3))
+₫1¥£!(PI)
+
+# import via the word alias also works — try:
+# vhqzomntyk "mathlib.qft"
